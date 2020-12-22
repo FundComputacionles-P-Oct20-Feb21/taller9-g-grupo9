@@ -1,0 +1,35 @@
+1. Inicio
+
+2. (valores(4)(4)), i[1-n]
+3. fila, i[0-n]
+4. columna, i[0-n]
+5. valores <-- {{20, 30, 40, 50}, {2, 3, 4, 5}, {200, 300, 400, 500},
+              {10, 11, 12, 14}}
+6. Para (fila <-- 0, fila < 4, 1) haga
+//           0          0 < 4   // V
+//           1          1 < 4   // V
+//           2          2 < 4   // V
+//           3          3 < 4   // V
+//           4          4 < 4   // F
+7.     Para (columna <-- (fila + 1), columna < 4, 1) haga
+//                        0 + 1 = 1        1 < 4   // V
+//                                         2 < 4   // V
+//                                         3 < 4   // V
+//                                         4 < 4   // F
+//                        1 + 1 = 2        2 < 4   // V
+//                                         3 < 4   // V
+//                                         4 < 4   // F
+//                        2 + 1 = 3        3 < 4   // V
+//                                         4 < 4   // F
+//                        3 + 1 = 4        4 < 4   // F
+8.         Escribir valores[fila][columna]
+//                  valores[0][1] >>> 30
+//                  valores[0][2] >>> 40
+//                  valores[0][3] >>> 50
+//                  valores[1][2] >>> 4
+//                  valores[1][3] >>> 5
+//                  valores[2][3] >>> 500
+9.     Fin_Para
+10. Fin_Para
+
+11. Fin

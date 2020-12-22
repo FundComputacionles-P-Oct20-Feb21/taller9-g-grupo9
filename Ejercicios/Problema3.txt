@@ -1,0 +1,60 @@
+1. Inicio
+
+2. (valores(3)(4), i[1-n])
+3. fila, i[1-n]
+4. columna, i[0-n]
+5. suma, d[1-n]
+6. (promedio(3), d[1-n])
+7. (nombres(3), x(100)[{a-z}, {A-Z}, {BS}])
+8. nombres <-- {Jerry Ponce, Gabriela Lewis, David Bell}
+9. valores <-- {{9, 10, 7, 8}, {10, 5, 7, 9}, {7, 9.4, 10, 9}}
+10. Para (fila <-- 0, fila < 3, 1) haga
+//           0          0 < 3   // V
+//           1          1 < 3   // V
+//           2          2 < 3   // V
+//           3          3 < 3   // F
+11.     suma <-- 0
+12.     Para (columna <-- 0, columna < 4, 1) haga
+//               0                 0 < 4   // V
+//               1                 1 < 4   // V
+//               2                 2 < 4   // V
+//               3                 3 < 4   // V
+//               4                 4 < 4   // F
+13.         suma <-- suma + valores[fila][columna]
+//             valores[0][0]  // 0 + 9      // 9
+//             valores[0][1]  // 9 + 10     // 19
+//             valores[0][2]  // 19 + 7     // 26
+//             valores[0][3]  // 26 + 8     // 34
+//                               suma = 34
+//             valores[1][0]  // 0 + 10     // 10
+//             valores[1][1]  // 10 + 5     // 15
+//             valores[1][2]  // 15 + 7     // 22
+//             valores[1][3]  // 22 + 9     // 31
+//                               suma = 31
+//             valores[2][0]  // 0 + 7      // 7
+//             valores[2][1]  // 7 + 9.4    // 16.4
+//             valores[2][2]  // 16.4 + 10  // 26.4
+//             valores[2][3]  // 26.4 + 9   // 35.4
+//                               suma = 35.4
+14.     Fin_Para
+15.     promedio[fila] <-- suma / 4
+//      promedio[0] = 34 / 4      // 8.5
+//      promedio[1] = 31 / 4      // 7.75
+//      promedio[2] = 35.4 / 4    // 8.85
+16. Fin_Para
+17. Para (fila <-- 0, fila < 3, 1) haga
+//            0          0 < 3   // V
+//            1          1 < 3   // V
+//            2          2 < 3   // V
+//            3          3 < 3   // F
+18.     Escribir "Estudiante: " + nombres[fila] + " tiene un promedio de "
+               + promedio[fila]
+//      nombres[0] promedio[0]
+//      >>> Estudiante: Jerry Ponce tiene un promedio de 8.5
+//      nombres[1] promedio[1]
+//      >>> Estudiante: Gabriela Lewis tiene un promedio de 7.75
+//      nombres[2] promedio[2]
+//      >>> Estudiante: David Bell tiene un promedio de 8.85
+19. Fin_Para
+
+20. Fin
